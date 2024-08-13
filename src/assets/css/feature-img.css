@@ -40,12 +40,12 @@
   }
   
   .slick-slide:hover .feature-img {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add box shadow on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
   .slick-slide:hover .image-caption {
-    font-size: 1.5rem; /* Enlarge the caption on hover */
+    font-size: 1.5rem; 
   }
   
   .custom-arrow {

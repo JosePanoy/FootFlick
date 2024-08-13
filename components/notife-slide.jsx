@@ -13,16 +13,27 @@ function NotifSlider() {
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
   };
 
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <div className="caption">Huge Sale on All Sneakers - Up to 50% Off!</div>
-        <div className="caption">New Arrivals: Latest Sneaker Designs Just Released!</div>
-        <div className="caption">Limited Time Offer: Buy One Get One 30% Off!</div>
-        <div className="caption">Exclusive Discount: 20% Off on All Running Shoes!</div>
-        <div className="caption">Seasonal Sale: Extra 10% Off on Clearance Items!</div>
+        <div className="slide">
+          <div className="caption">Huge Sale on All Sneakers - Up to 50% Off!</div>
+        </div>
+        <div className="slide">
+          <div className="caption">Arrivals: Latest Sneaker Designs Just Released!</div>
+        </div>
+        <div className="slide">
+          <div className="caption">Limited Time Offer: Buy One Get One 30% Off!</div>
+        </div>
+        <div className="slide">
+          <div className="caption">Exclusive Discount: 20% Off on All Running Shoes!</div>
+        </div>
+        <div className="slide">
+          <div className="caption">Seasonal Sale: Extra 10% Off on Clearance Items!</div>
+        </div>
       </Slider>
     </div>
   );

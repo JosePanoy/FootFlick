@@ -261,7 +261,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    margin-top: -20px;
   }
   
   .main-image {
@@ -277,3 +277,54 @@ html, body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
   
+
+
+  @media only screen and (min-width: 320px) and (max-width: 480px){
+
+    .main-image-container{
+        width: 500px;
+    }
+
+  }
+
+
+  
+
+  /* navbar.css */
+
+.main-title {
+    font-weight: 800;
+    font-size: 2rem;
+    cursor: default;
+  }
+  
+  .sub-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: default;
+    margin-top: -20px;
+  }
+  
+  .shop-button {
+    margin-top: -20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .shop-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+  }
+  
+
+  @media only screen and (min-width: 320px) and (max-width: 480px){
+
+
+  }
