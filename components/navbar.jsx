@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiMenu, FiSearch } from 'react-icons/fi'; 
+import { Link } from 'react-router-dom';
 import '../src/assets/css/navbar.css';
 import SiteLogo from '../public/logo.png';
 
@@ -18,14 +19,14 @@ function Navbar() {
                     <span className="site-name">Foot Flick</span>
                 </div>
                 <div className="navbar-links">
-                    <a href="/" className="nav-link">Home</a>
-                    <a href="/shop" className="nav-link">Shop</a>
-                    <a href="/bestseller" className="nav-link">Best Sellers</a>
-                    <a href="/newarrivals" className="nav-link">New Arrivals</a>
-                    <a href="/brands" className="nav-link">Brands</a>
-                    <a href="/userprofile" className="nav-link">User Profile</a>
-                    <a href="/cart" className="nav-link">Cart</a>
-                    <a href="/test" className="nav-link">Test Page</a>
+                    <Link to="/" className="nav-link">Home</Link>
+                    <Link to="/shop" className="nav-link">Shop</Link>
+                    <Link to="/bestseller" className="nav-link">Best Sellers</Link>
+                    <Link to="/newarrivals" className="nav-link">New Arrivals</Link>
+                    <Link to="/brands" className="nav-link">Brands</Link>
+                    <Link to="/userprofile" className="nav-link">User Profile</Link>
+                    <Link to="/cart" className="nav-link">Cart</Link>
+                    <Link to="/test" className="nav-link">Test Page</Link>
                 </div>
                 <FiMenu className="menu-icon" onClick={toggleSidebar} />
                 <div className="search-bar">
@@ -34,15 +35,14 @@ function Navbar() {
                 </div>
             </nav>
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-                <a href="/" className="sidebar-link">Home</a>
-                <a href="/shop" className="sidebar-link">Shop</a>
-                <a href="/bestseller" className="sidebar-link">best Sellers</a>
-                <a href="/newarrivals" className="sidebar-link">New Arrivals</a>
-                <a href="/brands" className="sidebar-link">Brands</a>
-                <a href="/userprofiles" className="sidebar-link">User Profiles</a>
-                <a href="/cart" className="sidebar-link">Cart</a>
-                <a href="/testpage" className="sidebar-link">Test Page</a>
-
+                <Link to="/" className="sidebar-link">Home</Link>
+                <Link to="/shop" className="sidebar-link">Shop</Link>
+                <Link to="/bestseller" className="sidebar-link">Best Sellers</Link>
+                <Link to="/newarrivals" className="sidebar-link">New Arrivals</Link>
+                <Link to="/brands" className="sidebar-link">Brands</Link>
+                <Link to="/userprofile" className="sidebar-link">User Profile</Link>
+                <Link to="/cart" className="sidebar-link">Cart</Link>
+                <Link to="/test" className="sidebar-link">Test Page</Link>
             </div>
         </>
     );
