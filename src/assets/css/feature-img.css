@@ -12,14 +12,14 @@
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .feature-slider .slick-slide {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: box-shadow 0.3s ease;
+
   }
   
   .feature-img {
@@ -28,7 +28,7 @@
     height: auto;
     border-radius: 8px;
     margin: 0 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
   }
   
   .image-caption {
@@ -36,17 +36,10 @@
     text-align: center;
     margin-top: 10px;
     font-weight: 600;
-    transition: font-size 0.3s ease;
+
   }
   
-  .slick-slide:hover .feature-img {
-    transform: scale(1.05); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  .slick-slide:hover .image-caption {
-    font-size: 1.5rem; 
-  }
+
   
   .custom-arrow {
     font-size: 2rem;
