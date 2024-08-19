@@ -28,11 +28,16 @@
     .images-container {
       flex-direction: column;
       align-items: center;
-      gap: 0; /* Remove gap between images */
+      gap: 0;
+
     }
   
     .feature-img2 {
-      max-width: 80%;
+      max-width: 90%;
+    }
+
+    .feature-img2-container {
+      margin-top: -150px;
     }
   }
   
@@ -42,11 +47,16 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      gap: 0; /* Remove gap between images */
+      gap: 0; 
+
     }
   
     .feature-img2 {
       max-width: 45%;
+    }
+
+    .feature-img2-container {
+      margin-top: -150px;
     }
   }
   
