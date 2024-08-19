@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: url('../src/assets/img/1.jpg'); /* Update path if necessary */
+    background-image: url('../img/1.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.3); 
     z-index: -1;
 }
 
