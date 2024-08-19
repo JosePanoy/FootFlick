@@ -1,160 +1,120 @@
 .feature-img-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-    margin-left: -10px;
-    margin-top: 30px;
-  }
-  
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 20px;
+  margin-top: 30px;
+
+}
+
+.feature-caption {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.feature-slider .slick-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 10px;
+}
+
+.image-caption {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.custom-arrow {
+  font-size: 2rem;
+  line-height: 1;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.custom-prev-arrow {
+  left: 10px;
+}
+
+.custom-next-arrow {
+  right: 10px;
+}
+
+/* Mobile view */
+@media only screen and (max-width: 480px) {
   .feature-caption {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
   }
-  
-  .feature-slider .slick-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-  }
-  
   .feature-img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 8px;
+    max-width: 300px;
     margin: 0 10px;
- 
   }
-  
-  .image-caption {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 10px;
-    font-weight: 600;
 
-  }
-  
-
-  
   .custom-arrow {
-    font-size: 2rem;
-    line-height: 1;
-    height: 40px;
-    width: 40px;
-    background: transparent;
-    border: none;
-    color: #333;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+    display: none;
   }
-  
-  .custom-prev-arrow {
-    left: 10px;
+
+  .feature-slider .slick-slide {
+    margin: 0 5px;
   }
-  
-  .custom-next-arrow {
-    right: 10px;
+
+  .image-caption {
+    font-size: 0.75rem;
+    margin-top: 5px;
   }
-  
-  @media (max-width: 960px) {
-    .feature-caption {
-      font-size: 1.5rem;
-    }
-  
-    .feature-img {
-      max-width: 500px;
-      height: auto;
-      margin: 0 20px;
-    }
-  
-    .custom-arrow {
-      font-size: 1.5rem;
-      height: 30px;
-      width: 30px;
-    }
-  
-    .feature-img-container {
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-left: -13px;
-    }
+}
+
+/* Tablet view */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .feature-caption {
+    font-size: 1.5rem;
   }
-  
-  @media (max-width: 768px) {
-    .feature-caption {
-      font-size: 1.5rem;
-    }
-  
-    .feature-img {
-      max-width: 450px;
-      height: auto;
-      margin: 0 15px;
-    }
-  
-    .custom-arrow {
-      font-size: 1.5rem;
-      height: 30px;
-      width: 30px;
-    }
-  
-    .feature-img-container {
-      padding: 10px;
-      margin-left: -10px;
-    }
+
+  .feature-img {
+    max-width: 450px;
+    margin: 0 15px;
   }
-  
-  @media (max-width: 480px) {
-    .feature-caption {
-      font-size: 1.25rem;
-    }
-  
-    .feature-img {
-      max-width: 350px;
-      height: auto;
-      margin: 0 20px;
-    }
-  
-    .custom-arrow {
-      font-size: 1.25rem;
-      height: 25px;
-      width: 25px;
-    }
-  
-    .feature-slider .slick-slide {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .feature-img-container {
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-left: -18px;
-    }
-  
-    .slick-slide {
-      padding: 0 2px;
-    }
-    
-    .feature-img {
-      margin: 0 2px;
-    }
-  
-    .feature-slider .slick-slide {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .image-caption {
-      font-size: 0.75rem;
-      margin-top: 3px;
-    }
+
+  .custom-arrow {
+    font-size: 1.5rem;
+    height: 30px;
+    width: 30px;
   }
-  
+}
+
+/* Wider screens */
+@media only screen and (min-width: 769px) {
+  .feature-caption {
+    font-size: 1.75rem;
+  }
+
+  .feature-img {
+    max-width: 600px;
+    margin: 0 25px;
+  }
+
+  .custom-arrow {
+    font-size: 1.75rem;
+    height: 35px;
+    width: 35px;
+  }
+}

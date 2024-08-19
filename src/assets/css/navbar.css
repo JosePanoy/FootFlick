@@ -1,8 +1,38 @@
-html, body {
+* {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    overflow-x: hidden;
 }
+
+.main-image-container {
+    position: relative;
+    width: 100vw;
+    height: 670px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('../src/assets/img/1.jpg'); /* Update path if necessary */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    z-index: -1;
+}
+
+
 
 .navbar {
     background-color: hsl(0, 0%, 18%);
@@ -291,22 +321,29 @@ html, body {
   
 
   /* navbar.css */
+  .midCaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .main-title {
     font-weight: 800;
     font-size: 2rem;
     cursor: default;
-  }
-  
-  .sub-title {
+}
+
+.sub-title {
     font-weight: 600;
     font-size: 1.2rem;
     cursor: default;
     margin-top: -20px;
-  }
-  
-  .shop-button {
-    margin-top: -20px;
+}
+
+.shop-button {
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: 600;
@@ -316,28 +353,23 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .shop-button:hover {
+}
+
+.shop-button:hover {
     background-color: #555;
     transform: scale(1.05);
-  }
-  
+}
 
-  @media only screen and (min-width: 320px) and (max-width: 480px){
-
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     .main-title {
         font-weight: 800;
         font-size: 14px;
-        cursor: default;
         margin-top: 15px;
-      }
-      
-      .sub-title {
+    }
+
+    .sub-title {
         font-weight: 600;
         font-size: 12px;
-        cursor: default;
         margin-top: -10px;
-      }
-      
-  }
+    }
+}

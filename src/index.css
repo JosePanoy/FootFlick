@@ -1,29 +1,7 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: #212121de;
-  background-color: hsl(0, 0%, 93%);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+*{
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
 }
 
-
-
-body {
-  margin: 0;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #212121de;
-    background-color: hsl(0, 0%, 93%);
-  }
-
+html{
+    background-color: hsl(0, 0%, 94%);
 }

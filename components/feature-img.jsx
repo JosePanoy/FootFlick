@@ -11,14 +11,14 @@ import 'slick-carousel/slick/slick-theme.css';
 
 function FeatureImg() {
   const settings = {
-    dots: false, 
+    dots: false,
     infinite: true,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: false, // Disable arrows
+    arrows: false,
     centerMode: true,
     centerPadding: '15px',
   };
