@@ -10,6 +10,7 @@ import UserProfile from './assets/pages/user-profile';
 import Cart from './assets/pages/cart';
 import Test from './assets/pages/test';
 import SearchPage from './assets/pages/search';
+import ProductPage from './assets/pages/products';
 
 import App from './App'
 import './index.css'
@@ -28,6 +29,8 @@ root.render(
         <Route path="/userprofile" element={<UserProfile />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+
         <Route path="/test" element={<Test />} />
       </Routes>
     </Router>
