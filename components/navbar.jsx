@@ -49,10 +49,10 @@ function Navbar() {
                         type="text"
                         placeholder="Search..."
                         value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)} // Update state on input change
-                        onKeyDown={handleKeyDown} // Handle Enter key press
+                        onChange={(e) => setSearchQuery(e.target.value)} 
+                        onKeyDown={handleKeyDown} 
                     />
-                    <FiSearch className="search-icon" onClick={handleSearch} /> {/* Handle search icon click */}
+                    <FiSearch className="search-icon" onClick={handleSearch} /> 
                 </div>
             </nav>
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
