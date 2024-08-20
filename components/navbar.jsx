@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import { FiMenu, FiSearch } from 'react-icons/fi'; 
 import { Link } from 'react-router-dom';
 import '../src/assets/css/navbar.css';
@@ -7,8 +7,8 @@ import SiteLogo from '../public/logo.png';
 
 function Navbar() {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
-    const [searchQuery, setSearchQuery] = useState(''); // State for search query
-    const navigate = useNavigate(); // Initialize navigate
+    const [searchQuery, setSearchQuery] = useState(''); 
+    const navigate = useNavigate(); 
 
     const toggleSidebar = () => {
         setSidebarOpen(prevState => !prevState);
@@ -16,13 +16,13 @@ function Navbar() {
 
     const handleSearch = () => {
         if (searchQuery.trim()) {
-            navigate(`/search?query=${encodeURIComponent(searchQuery)}`); // Redirect to search page
+            navigate(`/search?query=${encodeURIComponent(searchQuery)}`); 
         }
     };
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
-            handleSearch(); // Trigger search on Enter key press
+            handleSearch(); 
         }
     };
 
