@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHeart, FaShoppingCart, FaListAlt, FaStar } from 'react-icons/fa';
+
 import '../src/assets/css/fyp.css'
 
 // Boots (5 images)
@@ -67,6 +68,7 @@ function FYPpage() {
     return(
 
         <>
+
           <h3 className="just-for-you-heading">Just for You</h3>
             <div className="just-for-you-grid">
                 {justForYouImages.map((img, index) => {
@@ -76,7 +78,7 @@ function FYPpage() {
                             <img src={img} alt={`Just for You ${index + 1}`} className="just-for-you-image" />
                             <p>Random Shoe Title {index + 1}</p>
                             <p className="shoe-price">{getRandomPrice()}</p>
-                            <div className="icon-container">
+                            <div style={{cursor: 'pointer'}} className="icon-container">
                                 <FaHeart />
                                 <FaShoppingCart />
                                 <FaListAlt />

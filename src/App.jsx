@@ -6,6 +6,7 @@ import MainImage from '../components/main-image'
 import MidCaption from '../components/main-mid-caption'
 import FeatureImg from '../components/feature-img'
 import FeatureImg2 from '../components/feature-img1';
+import SearchPage from './assets/pages/search';
 import Footer from '../components/footer';
 import './App.css';
 
@@ -35,6 +36,9 @@ const App = () => {
         setCurrentPage('cart');
         break;
       case '/test':
+      setCurrentPage('search');
+      break;
+      case '/search':
         setCurrentPage('test');
         break;
       default:

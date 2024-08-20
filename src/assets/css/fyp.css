@@ -36,8 +36,15 @@
   .just-for-you-item p {
     text-align: center;
     margin: 0.5rem 0;
-  }
-  
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.just-for-you-item p:hover {
+    color: #f39c12; 
+    transform: scale(1.05); 
+}
+
   .shoe-price {
     font-weight: bold;
     color: #333;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { FiMenu, FiSearch } from 'react-icons/fi'; 
 import { Link } from 'react-router-dom';
 import '../src/assets/css/navbar.css';
@@ -6,9 +7,23 @@ import SiteLogo from '../public/logo.png';
 
 function Navbar() {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState(''); // State for search query
+    const navigate = useNavigate(); // Initialize navigate
 
     const toggleSidebar = () => {
         setSidebarOpen(prevState => !prevState);
+    };
+
+    const handleSearch = () => {
+        if (searchQuery.trim()) {
+            navigate(`/search?query=${encodeURIComponent(searchQuery)}`); // Redirect to search page
+        }
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            handleSearch(); // Trigger search on Enter key press
+        }
     };
 
     return (
@@ -30,8 +45,14 @@ function Navbar() {
                 </div>
                 <FiMenu className="menu-icon" onClick={toggleSidebar} />
                 <div className="search-bar">
-                    <input type="text" placeholder="Search..." />
-                    <FiSearch className="search-icon" />
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)} // Update state on input change
+                        onKeyDown={handleKeyDown} // Handle Enter key press
+                    />
+                    <FiSearch className="search-icon" onClick={handleSearch} /> {/* Handle search icon click */}
                 </div>
             </nav>
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>

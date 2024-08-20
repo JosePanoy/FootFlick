@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Navbar from '../../../components/navbar';
 import '../css/shop.css';
 import { useInView } from 'react-intersection-observer';
 import { useSpring, animated, easings } from 'react-spring';
 import FYPpage from '../../../components/fyp';
-
 
 import RunningSHoes from '../img/running.png';
 import CasualSHoes from '../img/casual.png';
@@ -15,20 +15,23 @@ import SlipOnsSHoes from '../img/slip-on.png';
 import HikingSHoes from '../img/hiking.png';
 import MoccasinsSHoes from '../img/moccasins.png';
 
-
-  
-
 function Shop() {
+  const navigate = useNavigate(); // Initialize navigate
+
   const shoeTypes = [
-    { id: 1, name: 'Running Shoes', image: RunningSHoes },
-    { id: 2, name: 'Casual Sneakers', image: CasualSHoes },
-    { id: 4, name: 'Sports Shoes', image: SportsSHoes },
-    { id: 5, name: 'Boots', image: BootsSHoes },
-    { id: 6, name: 'Sandals', image: SandalsSHoes },
-    { id: 7, name: 'Slip-Ons', image: SlipOnsSHoes },
-    { id: 8, name: 'Hiking Shoes', image: HikingSHoes },
-    { id: 9, name: 'Moccasins', image: MoccasinsSHoes }
+    { id: 1, name: 'Running Shoes', image: RunningSHoes, query: 'running+shoes' },
+    { id: 2, name: 'Casual Sneakers', image: CasualSHoes, query: 'casual+sneakers' },
+    { id: 4, name: 'Sports Shoes', image: SportsSHoes, query: 'sports+shoes' },
+    { id: 5, name: 'Boots', image: BootsSHoes, query: 'boots' },
+    { id: 6, name: 'Sandals', image: SandalsSHoes, query: 'sandals' },
+    { id: 7, name: 'Slip-Ons', image: SlipOnsSHoes, query: 'slip-ons' },
+    { id: 8, name: 'Hiking Shoes', image: HikingSHoes, query: 'hiking+shoes' },
+    { id: 9, name: 'Moccasins', image: MoccasinsSHoes, query: 'moccasins' }
   ];
+
+  const handleTileClick = (query) => {
+    navigate(`/search?query=${query}`);
+  };
 
   const { ref, inView } = useInView({
     triggerOnce: false,
@@ -41,25 +44,24 @@ function Shop() {
     config: { duration: 1000, easing: easings.linear },
   });
 
-  
-
-
   return (
     <>
       <Navbar />
       <h3 className="shoe-types-heading">Types of Shoes</h3>
       <animated.div ref={ref} className="shoe-types-grid">
         {shoeTypes.map(shoe => (
-          <animated.div style={fadeInLeft1} key={shoe.id} className="shoe-type-item">
+          <animated.div
+            style={fadeInLeft1}
+            key={shoe.id}
+            className="shoe-type-item"
+            onClick={() => handleTileClick(shoe.query)}
+          >
             <img src={shoe.image} alt={shoe.name} className="shoe-type-image" />
             <p className="shoe-type-name">{shoe.name}</p>
           </animated.div>
         ))}
       </animated.div>
-
-        <FYPpage />
-    
-    
+      <FYPpage />
     </>
   );
 }
