@@ -69,104 +69,110 @@ const imageMapping = {
 };
 
 function ProductPage() {
-  const { id } = useParams();
-  const product = imageMapping[id] || { image: '', name: 'Product not found', price: '', description: 'No description available' };
-
-  const [quantity, setQuantity] = useState(1);
-  const [selectedColor, setSelectedColor] = useState('');
-  const [selectedSize, setSelectedSize] = useState('');
-  const [selectionSummary, setSelectionSummary] = useState('');
-
-  const handleQuantityChange = (event) => {
-    const value = parseInt(event.target.value, 10);
-    if (!isNaN(value) && value > 0) {
-      setQuantity(value);
-      updateSelectionSummary(selectedColor, selectedSize, value);
-    }
-  };
-
-  const handleColorSelect = (color) => {
-    setSelectedColor(color);
-    updateSelectionSummary(color, selectedSize, quantity);
-  };
-
-  const handleSizeSelect = (size) => {
-    setSelectedSize(size);
-    updateSelectionSummary(selectedColor, size, quantity);
-  };
-
-  const updateSelectionSummary = (color, size, quantity) => {
-    setSelectionSummary(`Color: ${color}, Size: ${size}, Quantity: ${quantity}`);
-  };
-
-  return (
-    <>
-      <Navbar />
-      <div className="product-page">
-        <div className="grid-container">
-          <div className="pic">
-            <img src={product.image} alt={product.name} className="product-image" />
-          </div>
-          <div className="pr-name">
-            <h1>{product.name}</h1>
-            <div className="rating">
-              {Array(5).fill().map((_, i) => (
-                <FaStar key={i} className="star-icon" />
-              ))}
+    const { id } = useParams();
+    const product = imageMapping[id] || { image: '', name: 'Product not found', price: '', description: 'No description available' };
+  
+    const [quantity, setQuantity] = useState(1);
+    const [selectedColor, setSelectedColor] = useState('');
+    const [selectedSize, setSelectedSize] = useState('');
+    const [selectionSummary, setSelectionSummary] = useState('');
+  
+    const handleQuantityChange = (event) => {
+      const value = parseInt(event.target.value, 10);
+      if (!isNaN(value) && value > 0) {
+        setQuantity(value);
+        updateSelectionSummary(selectedColor, selectedSize, value);
+      }
+    };
+  
+    const handleColorSelect = (color) => {
+      setSelectedColor(color);
+      updateSelectionSummary(color, selectedSize, quantity);
+    };
+  
+    const handleSizeSelect = (size) => {
+      setSelectedSize(size);
+      updateSelectionSummary(selectedColor, size, quantity);
+    };
+  
+    const updateSelectionSummary = (color, size, quantity) => {
+      setSelectionSummary(`Color: ${color}, Size: ${size}, Quantity: ${quantity}`);
+    };
+  
+    return (
+      <>
+        <Navbar />
+        <div className="product-page">
+          <div className="grid-container">
+            <div className="pic">
+              <img src={product.image} alt={product.name} className="product-image" />
             </div>
-            <p className="product-price">{product.price}</p>
-            <div className="icons">
-              <FaHeart className="icon heart-icon" />
-              <FaListAlt className="icon list-icon" />
-              <FaShoppingCart className="icon cart-icon" />
+  
+            <div className="pr-name">
+              <h1>{product.name}</h1>
+              <div className="rating">
+                {Array(5).fill().map((_, i) => (
+                  <FaStar key={i} className="star-icon" />
+                ))}
+              </div>
+              <p className="product-price">{product.price}</p>
+              <div className="icons">
+                <FaHeart className="icon heart-icon" />
+                <FaListAlt className="icon list-icon" />
+                <FaShoppingCart className="icon cart-icon" />
+              
+              </div>
               <p className="selection-summary">{selectionSummary}</p>
             </div>
-          </div>
-          <div className="colors">
-            <h2>Colors</h2>
-            <div className="color-boxes">
-              {['Red', 'Lime', 'Blue', 'Yellow', 'Fuchsia', 'Aqua'].map(color => (
-                <div 
-                  key={color} 
-                  className="color-box" 
-                  style={{ backgroundColor: color }} 
-                  onClick={() => handleColorSelect(color)}
-                ></div>
-              ))}
+  
+            <div className="colors">
+              <h2>Colors</h2>
+              <div className="color-boxes">
+                {['Red', 'Lime', 'Blue', 'Yellow', 'Fuchsia', 'Aqua'].map(color => (
+                  <div 
+                    key={color} 
+                    className="color-box" 
+                    style={{ backgroundColor: color }} 
+                    onClick={() => handleColorSelect(color)}
+                  ></div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="sizing">
-            <h2>Sizing</h2>
-            <div className="size-boxes">
-              {[36, 37, 38, 39, 40, 41, 42, 43, 44].map(size => (
-                <div 
-                  key={size} 
-                  className="size-box" 
-                  onClick={() => handleSizeSelect(size)}
-                >
-                  {size}
-                </div>
-              ))}
+  
+            <div className="sizing">
+              <h2>Sizing</h2>
+              <div className="size-boxes">
+                {[36, 37, 38, 39, 40, 41, 42, 43, 44].map(size => (
+                  <div 
+                    key={size} 
+                    className="size-box" 
+                    onClick={() => handleSizeSelect(size)}
+                  >
+                    {size}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="quantity">
-            <h2>Select Quantity</h2>
-            <input 
-              type="number" 
-              value={quantity} 
-              onChange={handleQuantityChange} 
-              min="1" 
-              className="quantity-input"
-            />
-          </div>
-          <div className="cart">
-            <button>Buy Now</button>
-            <button>Add to Cart</button>
+  
+            <div className="quantity">
+              <h2>Select Quantity</h2>
+              <input 
+                type="number" 
+                value={quantity} 
+                onChange={handleQuantityChange} 
+                min="1" 
+                className="quantity-input"
+              />
+            </div>
+  
+            <div className="cart">
+              <button>Buy Now</button>
+              <button>Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
-}
-
-export default ProductPage;
+      </>
+    );
+  }
+  
+  export default ProductPage;

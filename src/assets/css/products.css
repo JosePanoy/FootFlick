@@ -17,7 +17,6 @@
 .pic {
     grid-column: 1;
     grid-row: 1 / span 2;
-
     padding: 10px;
 }
 
@@ -53,33 +52,30 @@
 
 .icons {
     display: flex;
-    gap: 10px;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
+    flex-direction: row; 
+    gap: 10px; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: -10px;
 }
 
 .icon {
     font-size: 1.5em;
     cursor: pointer;
-    margin-top: -10px;
 }
 
 .heart-icon {
     color: #FF0000;
 }
 
-.list-icon {
-    color: #1e1e1e;
-}
-
-.cart-icon {
+.list-icon, .cart-icon {
     color: #1e1e1e;
 }
 
 .colors {
     grid-column: 1 / span 2;
     grid-row: 2;
-    height: auto; /* Allow height to adjust based on content */
+    height: auto; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,7 +100,7 @@
 .sizing {
     grid-column: 1 / span 2;
     grid-row: 3;
-    height: auto; /* Allow height to adjust based on content */
+    height: auto; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,19 +139,9 @@
     margin-bottom: 10px;
 }
 
-.quantity-controls {
-    display: flex;
-    align-items: center;
-}
-
-.quantity button {
-    margin: 0 5px;
-    padding: 10px 20px;
-}
-
-.quantity p {
-    margin: 0 10px;
+.quantity-input {
     font-size: 1.2em;
+    text-align: center;
 }
 
 .cart {
@@ -180,25 +166,10 @@
     margin: 5px;
 }
 
-.color-box {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
-}
-
-.size-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
 .size-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px;
     width: 40px;
     height: 40px;
     background-color: #f0f0f000;
@@ -221,10 +192,8 @@ h2 {
 .selection-summary {
     font-size: 1.2rem;
     color: hsl(0, 0%, 15%);
-    margin-top: 30px;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    text-align: left;
+    margin-top: 20px; 
+    text-align: center; 
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -238,53 +207,8 @@ h2 {
         grid-row: 1;
     }
     
-    .pr-name {
+    .pr-name, .colors, .sizing, .quantity, .cart {
         grid-column: 1;
-        grid-row: 2;
-    }
-    
-    .colors {
-        grid-column: 1;
-        grid-row: 3;
-    }
-    
-    .sizing {
-        grid-column: 1;
-        grid-row: 4;
-    }
-    
-    .quantity {
-        grid-column: 1;
-        grid-row: 5;
-    }
-    
-    .cart {
-        grid-column: 1;
-        grid-row: 6;
-    }
-    
-    .product-image {
-        width: 100%;
-        height: auto;
-    }
-    
-    .color-box, .size-box {
-        width: 30px;
-        height: 30px;
-    }
-    
-    button {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-    
-    .selection-summary {
-        text-align: left;
-        margin-left: -30px;
-    }
-
-    .icons p {
-        text-align: left;
     }
 }
 
@@ -292,7 +216,6 @@ h2 {
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        margin-top: -20px;
     }
     
     .pic {
@@ -300,54 +223,7 @@ h2 {
         grid-row: 1;
     }
     
-    .pr-name {
+    .pr-name, .colors, .sizing, .quantity, .cart {
         grid-column: 1;
-        grid-row: 2;
-        margin-top: -20px;
-    }
-    
-    .colors {
-        grid-column: 1;
-        grid-row: 3;
-    }
-    
-    .sizing {
-        grid-column: 1;
-        grid-row: 4;
-    }
-    
-    .quantity {
-        grid-column: 1;
-        grid-row: 5;
-    }
-    
-    .cart {
-        grid-column: 1;
-        grid-row: 6;
-    }
-    
-    .product-image {
-        width: 100%;
-        height: auto;
-    }
-    
-    .color-box, .size-box {
-        width: 25px;
-        height: 25px;
-    }
-    
-    button {
-        padding: 8px 12px;
-        font-size: 0.8rem;
-    }
-
-    .selection-summary {
-        text-align: left;
-        margin-left: -45px;
-    }
-
-    .icons p {
-        text-align: left;
-        font-size: 0.9rem;
     }
 }
