@@ -123,13 +123,13 @@
 }
 
 .quantity {
-    grid-column: 1;
+    grid-column: 1 / span 2;
     grid-row: 4;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: auto;
     border: 1px solid #ddd;
     padding: 10px;
     box-sizing: border-box;
@@ -140,18 +140,28 @@
 }
 
 .quantity-input {
+    -moz-appearance: textfield; /* Hide spin buttons in Firefox */
+    appearance: textfield; /* Hide spin buttons in other browsers */
+    padding: 10px;
     font-size: 1.2em;
     text-align: center;
 }
 
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Default for WebKit-based browsers */
+}
+
+
+
 .cart {
-    grid-column: 2;
-    grid-row: 4;
+    grid-column: 1 / span 2;
+    grid-row: 5;
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: auto;
     border: 1px solid #ddd;
     padding: 10px;
 }
@@ -223,7 +233,24 @@ h2 {
         grid-row: 1;
     }
     
-    .pr-name, .colors, .sizing, .quantity, .cart {
-        grid-column: 1;
+    .pr-name {
+        grid-row: 2;
+    }
+
+    .colors {
+        grid-row: 3;
+    }
+    
+    .sizing {
+        grid-row: 4;
+    }
+    
+    .quantity {
+        grid-row: 5;
+    }
+    
+    .cart {
+        grid-row: 6;
+        margin-top: 20px;
     }
 }

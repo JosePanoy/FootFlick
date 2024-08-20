@@ -78,12 +78,17 @@ function ProductPage() {
     const [selectionSummary, setSelectionSummary] = useState('');
   
     const handleQuantityChange = (event) => {
-      const value = parseInt(event.target.value, 10);
-      if (!isNaN(value) && value > 0) {
-        setQuantity(value);
-        updateSelectionSummary(selectedColor, selectedSize, value);
-      }
+        const value = event.target.value;
+    
+        if (value === "" || !isNaN(parseInt(value, 10))) {
+            const numberValue = parseInt(value, 10);
+            if (numberValue > 0 || value === "") {
+                setQuantity(numberValue > 0 ? numberValue : "");
+                updateSelectionSummary(selectedColor, selectedSize, numberValue > 0 ? numberValue : 0);
+            }
+        }
     };
+    
   
     const handleColorSelect = (color) => {
       setSelectedColor(color);
