@@ -79,24 +79,51 @@
 .colors {
     grid-column: 1 / span 2;
     grid-row: 2;
-    height: 100px;
+    height: auto; /* Allow height to adjust based on content */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     border: 1px solid #ddd;
     padding: 10px;
+}
+
+.color-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #ddd;
 }
 
 .sizing {
     grid-column: 1 / span 2;
     grid-row: 3;
-    height: 100px;
+    height: auto; /* Allow height to adjust based on content */
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     border: 1px solid #ddd;
     padding: 10px;
+}
+
+.size-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.size-box {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #ddd;
 }
 
 .quantity {
