@@ -162,10 +162,11 @@ function ProductPage() {
 
             <hr />
             <div className="product-summary">
-              <p>Color: {selectedColor || 'Select a color'}</p>
-              <p>Size: {selectedSize || 'Select a size'}</p>
-              <p>Quantity: {quantity}</p>
-            </div>
+  <p>Color: <span style={{ fontWeight: 'bold' }}>{selectedColor || 'Select a color'}</span></p>
+  <p>Size: <span style={{ fontWeight: 'bold' }}>{selectedSize || 'Select a size'}</span></p>
+  <p>Quantity: <span style={{ fontWeight: 'bold' }}>{quantity}</span></p>
+</div>
+
             <hr />
 
             <button className="btn buy-now">Buy Now</button>

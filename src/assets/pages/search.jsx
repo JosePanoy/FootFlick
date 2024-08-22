@@ -33,17 +33,17 @@ function SearchPage() {
     
     return (
         <>
-        <Navbar />
-        <div className="search-page">
-            <h3>Search Results for "{query.replace('+', ' ')}"</h3>
-            <div className="image-grid">
-                {images.map(image => (
-                    <div key={image.id} className="image-item">
-                        <img src={image.urls.small} alt={image.alt_description} />
-                    </div>
-                ))}
+            <Navbar />
+            <div className="search-page">
+                <h3>Search Results for "{query.replace('+', ' ')}"</h3>
+                <div className="image-grid">
+                    {images.map(image => (
+                        <div key={image.id} className="image-item">
+                            <img src={image.urls.small} alt={image.alt_description} />
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
         </>
     );
 }
