@@ -58,14 +58,12 @@
 }
 
 .star-icon {
-    color: gold;
+    color: gray;
 }
 
-.no-ratings {
-    font-size: 0.75rem; 
-    color: #888; 
-    margin: 0;
-}
+.star-icon.filled {
+    color: gold; /* Filled star color */
+  }
 
   
   .icon-container {

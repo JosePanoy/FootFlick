@@ -36,41 +36,40 @@ import fyp29 from '../img/sports/2.png';
 import fyp30 from '../img/sports/3.png';
 
 const imageMapping = {
-  0: { image: fyp1, name: 'Boots', price: '$99.99', description: 'Comfortable boots' },
-  1: { image: fyp2, name: 'Boots', price: '$99.99', description: 'Comfortable boots' },
-  2: { image: fyp3, name: 'Boots', price: '$99.99', description: 'Comfortable boots' },
-  3: { image: fyp4, name: 'Boots', price: '$99.99', description: 'Comfortable boots' },
-  4: { image: fyp5, name: 'Boots', price: '$99.99', description: 'Comfortable boots' },
-  5: { image: fyp6, name: 'Casual Sneakers', price: '$79.99', description: 'Stylish sneakers' },
-  6: { image: fyp7, name: 'Casual Sneakers', price: '$79.99', description: 'Stylish sneakers' },
-  7: { image: fyp8, name: 'Casual Sneakers', price: '$79.99', description: 'Stylish sneakers' },
-  8: { image: fyp9, name: 'Casual Sneakers', price: '$79.99', description: 'Stylish sneakers' },
-  9: { image: fyp10, name: 'Hiking Shoes', price: '$119.99', description: 'Durable hiking shoes' },
-  10: { image: fyp11, name: 'Hiking Shoes', price: '$119.99', description: 'Durable hiking shoes' },
-  11: { image: fyp12, name: 'Hiking Shoes', price: '$119.99', description: 'Durable hiking shoes' },
-  12: { image: fyp13, name: 'Hiking Shoes', price: '$119.99', description: 'Durable hiking shoes' },
-  13: { image: fyp14, name: 'Moccasins', price: '$89.99', description: 'Comfortable moccasins' },
-  14: { image: fyp15, name: 'Moccasins', price: '$89.99', description: 'Comfortable moccasins' },
-  15: { image: fyp16, name: 'Moccasins', price: '$89.99', description: 'Comfortable moccasins' },
-  16: { image: fyp17, name: 'Running Shoes', price: '$109.99', description: 'High-performance running shoes' },
-  17: { image: fyp18, name: 'Running Shoes', price: '$109.99', description: 'High-performance running shoes' },
-  18: { image: fyp19, name: 'Running Shoes', price: '$109.99', description: 'High-performance running shoes' },
-  19: { image: fyp20, name: 'Running Shoes', price: '$109.99', description: 'High-performance running shoes' },
-  20: { image: fyp21, name: 'Running Shoes', price: '$109.99', description: 'High-performance running shoes' },
-  21: { image: fyp22, name: 'Sandals', price: '$49.99', description: 'Comfortable sandals' },
-  22: { image: fyp23, name: 'Sandals', price: '$49.99', description: 'Comfortable sandals' },
-  23: { image: fyp24, name: 'Sandals', price: '$49.99', description: 'Comfortable sandals' },
-  24: { image: fyp25, name: 'Slip-Ons', price: '$59.99', description: 'Easy-to-wear slip-ons' },
-  25: { image: fyp26, name: 'Slip-Ons', price: '$59.99', description: 'Easy-to-wear slip-ons' },
-  26: { image: fyp27, name: 'Slip-Ons', price: '$59.99', description: 'Easy-to-wear slip-ons' },
-  27: { image: fyp28, name: 'Sports Shoes', price: '$89.99', description: 'High-quality sports shoes' },
-  28: { image: fyp29, name: 'Sports Shoes', price: '$89.99', description: 'High-quality sports shoes' },
-  29: { image: fyp30, name: 'Sports Shoes', price: '$89.99', description: 'High-quality sports shoes' }
-};
-
+    0: { image: fyp1, name: 'Boots', price: '$99.99', rating: 4 },
+    1: { image: fyp2, name: 'Boots', price: '$99.99', rating: 3 },
+    2: { image: fyp3, name: 'Boots', price: '$99.99', rating: 5 },
+    3: { image: fyp4, name: 'Boots', price: '$99.99', rating: 2 },
+    4: { image: fyp5, name: 'Boots', price: '$99.99', rating: 4 },
+    5: { image: fyp6, name: 'Casual Sneakers', price: '$79.99', rating: 5 },
+    6: { image: fyp7, name: 'Casual Sneakers', price: '$79.99', rating: 3 },
+    7: { image: fyp8, name: 'Casual Sneakers', price: '$79.99', rating: 4 },
+    8: { image: fyp9, name: 'Casual Sneakers', price: '$79.99', rating: 2 },
+    9: { image: fyp10, name: 'Hiking Shoes', price: '$119.99', rating: 5 },
+    10: { image: fyp11, name: 'Hiking Shoes', price: '$119.99', rating: 4 },
+    11: { image: fyp12, name: 'Hiking Shoes', price: '$119.99', rating: 3 },
+    12: { image: fyp13, name: 'Hiking Shoes', price: '$119.99', rating: 5 },
+    13: { image: fyp14, name: 'Moccasins', price: '$89.99', rating: 4 },
+    14: { image: fyp15, name: 'Moccasins', price: '$89.99', rating: 3 },
+    15: { image: fyp16, name: 'Moccasins', price: '$89.99', rating: 5 },
+    16: { image: fyp17, name: 'Running Shoes', price: '$109.99', rating: 4 },
+    17: { image: fyp18, name: 'Running Shoes', price: '$109.99', rating: 5 },
+    18: { image: fyp19, name: 'Running Shoes', price: '$109.99', rating: 3 },
+    19: { image: fyp20, name: 'Running Shoes', price: '$109.99', rating: 4 },
+    20: { image: fyp21, name: 'Running Shoes', price: '$109.99', rating: 2 },
+    21: { image: fyp22, name: 'Sandals', price: '$49.99', rating: 5 },
+    22: { image: fyp23, name: 'Sandals', price: '$49.99', rating: 3 },
+    23: { image: fyp24, name: 'Sandals', price: '$49.99', rating: 4 },
+    24: { image: fyp25, name: 'Slip-Ons', price: '$59.99', rating: 2 },
+    25: { image: fyp26, name: 'Slip-Ons', price: '$59.99', rating: 5 },
+    26: { image: fyp27, name: 'Slip-Ons', price: '$59.99', rating: 3 },
+    27: { image: fyp28, name: 'Sports Shoes', price: '$89.99', rating: 4 },
+    28: { image: fyp29, name: 'Sports Shoes', price: '$89.99', rating: 5 },
+    29: { image: fyp30, name: 'Sports Shoes', price: '$89.99', rating: 3 }
+  };
 function ProductPage() {
     const { id } = useParams();
-    const product = imageMapping[id] || { image: '', name: 'Product not found', price: '', description: 'No description available' };
+    const product = imageMapping[id] || { image: '', name: 'Product not found', price: '', description: 'No description available', rating: 0 };
   
     const [quantity, setQuantity] = useState(1);
     const [selectedColor, setSelectedColor] = useState('');
@@ -78,17 +77,15 @@ function ProductPage() {
     const [selectionSummary, setSelectionSummary] = useState('');
   
     const handleQuantityChange = (event) => {
-        const value = event.target.value;
-    
-        if (value === "" || !isNaN(parseInt(value, 10))) {
-            const numberValue = parseInt(value, 10);
-            if (numberValue > 0 || value === "") {
-                setQuantity(numberValue > 0 ? numberValue : "");
-                updateSelectionSummary(selectedColor, selectedSize, numberValue > 0 ? numberValue : 0);
-            }
+      const value = event.target.value;
+      if (value === "" || !isNaN(parseInt(value, 10))) {
+        const numberValue = parseInt(value, 10);
+        if (numberValue > 0 || value === "") {
+          setQuantity(numberValue > 0 ? numberValue : "");
+          updateSelectionSummary(selectedColor, selectedSize, numberValue > 0 ? numberValue : 0);
         }
+      }
     };
-    
   
     const handleColorSelect = (color) => {
       setSelectedColor(color);
@@ -107,50 +104,43 @@ function ProductPage() {
     return (
       <>
         <Navbar />
-        <div className="product-page">
-          <div className="grid-container">
-            <div className="pic">
-              <img src={product.image} alt={product.name} className="product-image" />
+        <h2 style={{ color: 'black', marginTop: '80px', textAlign: 'center' }} className="title">Product Page</h2>
+        <div className="flex-container">
+          <div className="flex-item">
+            <img src={product.image} alt={product.name} />
+          </div>
+          <div className="flex-item product-details">
+            <h3 style={{ fontSize: '2rem' }}>{product.name}</h3>
+            <p style={{ color: 'orangered', cursor: 'default', fontSize: '1.5rem' }}>{product.price}</p>
+
+            <div className="rating">
+              {Array(5).fill().map((_, i) => (
+                <FaStar key={i} className={`star-icon ${i < product.rating ? 'filled' : ''}`} />
+              ))}
             </div>
-  
-            <div className="pr-name">
-              <h1>{product.name}</h1>
-              <div className="rating">
-                {Array(5).fill().map((_, i) => (
-                  <FaStar key={i} className="star-icon" />
-                ))}
-              </div>
-              <p className="product-price">{product.price}</p>
-              <div className="icons">
-                <FaHeart className="icon heart-icon" />
-                <FaListAlt className="icon list-icon" />
-                <FaShoppingCart className="icon cart-icon" />
-              
-              </div>
-              <p className="selection-summary">{selectionSummary}</p>
-            </div>
-  
+            <hr />
+
             <div className="colors">
               <h2>Colors</h2>
               <div className="color-boxes">
                 {['Red', 'Lime', 'Blue', 'Yellow', 'Fuchsia', 'Aqua'].map(color => (
                   <div 
                     key={color} 
-                    className="color-box" 
+                    className={`color-box ${selectedColor === color ? 'selected' : ''}`} 
                     style={{ backgroundColor: color }} 
                     onClick={() => handleColorSelect(color)}
                   ></div>
                 ))}
               </div>
             </div>
-  
-            <div className="sizing">
-              <h2>Sizing</h2>
+
+            <div className="sizes">
+              <h2>Sizes</h2>
               <div className="size-boxes">
-                {[36, 37, 38, 39, 40, 41, 42, 43, 44].map(size => (
+                {['S', 'M', 'L', 'XL', 'XXL'].map(size => (
                   <div 
                     key={size} 
-                    className="size-box" 
+                    className={`size-box ${selectedSize === size ? 'selected' : ''}`} 
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -158,7 +148,7 @@ function ProductPage() {
                 ))}
               </div>
             </div>
-  
+
             <div className="quantity">
               <h2>Select Quantity</h2>
               <input 
@@ -169,15 +159,21 @@ function ProductPage() {
                 className="quantity-input"
               />
             </div>
-  
-            <div className="cart">
-              <button>Buy Now</button>
-              <button>Add to Cart</button>
+
+            <hr />
+            <div className="product-summary">
+              <p>Color: {selectedColor || 'Select a color'}</p>
+              <p>Size: {selectedSize || 'Select a size'}</p>
+              <p>Quantity: {quantity}</p>
             </div>
+            <hr />
+
+            <button className="btn buy-now">Buy Now</button>
+            <button className="btn add-to-cart">Add to Cart</button>
           </div>
         </div>
       </>
     );
-  }
-  
-  export default ProductPage;
+}
+
+export default ProductPage;
